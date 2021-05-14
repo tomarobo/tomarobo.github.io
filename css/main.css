@@ -82,7 +82,7 @@ main{
 }
 
 #main_area{
-    background-image: url("/img/top_img/PC_Width.png");
+    background-image: url("/img/top_img/PC_width.png");
     background-size:cover;
     margin: 0;
     width: 100%;
