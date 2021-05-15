@@ -2,6 +2,10 @@
     display: none;
 }
 
+p{
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,YuGothic,'Yu Gothic',sans-serif;
+}
+
 /*common*/
 a{
     color: #0066c0;
@@ -53,7 +57,7 @@ html,body{
     overflow-x : hidden; overflow-y : auto;
     background-color: whitesmoke;
     -webkit-text-size-adjust: 100%; /*iOS 横画面文字サイズ対策*/
-    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',"BIZ UDPGothic",Meiryo,YuGothic,'Yu Gothic',sans-serif;
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Yu Gothic',sans-serif;
     color: #333333;
 }
 
