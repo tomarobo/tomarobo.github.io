@@ -1,3 +1,7 @@
+.sp{
+    display: none;
+}
+
 /*common*/
 a{
     color: #0066c0;
@@ -9,6 +13,7 @@ a:hover{
     text-decoration:underline;
 }
 
+/*title*/
 .title-link{
     margin-bottom: 5px;
     font-size: 25px;
@@ -21,12 +26,28 @@ a:hover{
     font-size: 25px;
     text-align: center;
 }
-
 a.title-link:hover{
     color: gray;
     text-decoration:none;
 }
 
+.title-link .fa-external-link-alt{
+    color: gray;
+    font-size: 18px;
+}
+
+/*width*/
+.display-width{
+    width: 1200px;
+    margin: auto auto;
+}
+.section-contents{
+    margin-top:  10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*main*/
 html,body{
     margin: 0; padding: 0;
     overflow-x : hidden; overflow-y : auto;
@@ -36,32 +57,96 @@ html,body{
     color: #333333;
 }
 
+/*load*/
+#loader{
+    position: fixed;
+    width: 100%; height: 100%;
+    top:0;right: 0;
+    background-color: #002241;
+    z-index: 100;
+} 
+.loader-circle1{
+    position: absolute;
+    width: 150px; height: 150px;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    margin: auto;
+}
+#loader-1{
+    animation: load1 2s ease 0s infinite normal none running;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 103;
+}
+@keyframes load1{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+#loader-2{
+    animation: load2 2s ease 1s infinite normal none running;
+    border-radius: 50%;
+    background-color: yellow;
+    z-index: 102;
+}
+@keyframes load2{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+#loader p{
+    position: absolute;
+    bottom: 50px; left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    color: white;
+}
+
+
 /*////header////*/
 header{
     position: fixed;
     top:0; left:0;
     width: 100%; height: 80px;
     background-color: white;
+    border-bottom: solid 1px whitesmoke;
     z-index: 99;
+}
+#header-inner{
+    position: relative;
+    height: 80px;
 }
 header img{
     position: absolute;
-    top:5px; left: 105px;
+    top:5px; left: 5px;
     width: 70px; height: 70px;
 }
 header h1{
     position: relative;
-    top:8px; left: 180px; 
+    top:8px; left: 80px; 
     width: 500px; height: 60px;
     margin: 0;
     line-height:30px;
-    font-size: 28px;
+    font-size: 25px;
 }
 header h1 span{
     font-size: 18px;
 }
 
 #header-sns-button button{
+    padding: 0;
     border: none;
     outline: none;
     font-size: 30px;
@@ -69,7 +154,7 @@ header h1 span{
 }
 #header-sns-button-instagram{
     position: absolute;
-    top:15px; right: 100px;
+    top:15px; right: 0px;
     width: 50px; height: 50px;
     border-radius: 25px;
     background-color: #333333;
@@ -78,7 +163,7 @@ header h1 span{
 }
 #header-sns-button-twitter{
     position: absolute;
-    top:15px; right: 170px;
+    top:15px; right: 70px;
     width: 50px; height: 50px;
     border-radius: 25px;
     background-color: #333333;
@@ -86,14 +171,14 @@ header h1 span{
     transition: all 0.5s ease;
 }
 #header-sns-button-instagram:active,#header-sns-button-instagram:focus,#header-sns-button-instagram:hover{
-    top:10px; right: 95px;
+    top:10px; right: -5px;
     width: 60px; height: 60px;
     border-radius: 30px;
     background-color: whitesmoke;
     color:#CF2E92;
 }
 #header-sns-button-twitter:active,#header-sns-button-twitter:focus,#header-sns-button-twitter:hover{
-    top:10px; right: 165px;
+    top:10px; right: 65px;
     width: 60px; height: 60px;
     border-radius: 30px;
     background-color: whitesmoke;
@@ -103,57 +188,118 @@ header h1 span{
 /*////main////*/
 /*top*/
 section#top-bar{
-    position: relative;
-    width: 100%; height: calc(100vh - 80px);
+    width: 100%; height: calc(100vh - 150px);
     margin-top: 80px;
     background-image: url("/img/main/PC_width.png");
     background-size:cover;
 }
-
-
-/*notification*/
-section#notification{
-    margin: 80px 100px;
-    text-align: center;
+#top-bar-inner{
+    position: relative;
+    height: calc(100vh - 150px);
+}
+#copy{
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    margin: 0;
+    font-size: 80px;
+    color: white;
+    text-align: right;
+}
+.copy-under{
+    background-color: #002241;
+    padding: 10px;
 }
 
+#scroll{
+    position: absolute;
+    bottom: 0px; left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 80px; height: 80px;
+    margin: 0;
+}
+#scroll_move{
+    position: absolute;
+    left: calc(50% - 5px);
+    width: 10px; height: 10px;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0;
+    animation: scroll 1.5s ease 0s infinite normal none running;
+} 
+@keyframes scroll{
+    5% {
+        opacity: 1;
+        transform: scale(2);
+    }
+
+    95% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/*about*/
+#about-outer{
+    background-color: #002241;
+    padding: 20px;
+    text-align: center;
+}
+#about h3{
+    font-size: 28px;
+    margin: 0;
+    color: whitesmoke;
+}
+#about h3 a{
+    color: whitesmoke;
+}
+#about h3 a:hover,#about h3 a:active,#about h3 a:focus{
+    color: skyblue;
+    text-decoration:none;
+}
+#about h3 a i{
+    font-size: 16px;
+}
+
+/*notification*/
+#notification{
+    opacity: 0;
+}
 #twitter{
     display: inline-block;
     margin-right: 1%;
     vertical-align: top;
-    width: 48%;
+    width: 48.5%;
 }
 
 #infomation{
     display: inline-block;
     margin-left: 1%;
     vertical-align: top;
-    width: 48%;
+    width: 48.5%;
 }
-ul#infomation-list,#infomation-list li{
+#infomation-list{
+    margin: 0;
     padding: 0;
-    list-style: none;
-}
-ul#infomation-list{
-    height: 480px;
-    padding: 10px;
+    height: 490px;
+    padding: 0 10px 10px 10px;
     overflow-y: scroll;
 }
 #infomation-list li{
+    list-style: none;
     width: calc(100% - 10px);
-    margin-top: 5px;
     margin-bottom: 20px;
     padding: 5px;
     background-color: white;
 }
 
 /*instagram*/
-section#instagram{
-    margin: 80px 0px 0px;
-}
-section#instagram h2{
-    text-align: center;
-}
 #SnapWidget-outer{
     margin-top: 20px;  margin-bottom: 20px;
 }
@@ -163,38 +309,41 @@ section#instagram h2{
     padding-top: 1px;
     background-color: #333333;
 }
-#howtomake-inbox{
-    margin: 40px 100px 0px;
-}
 #howtomake-inbox h2{
-    margin-top: 0;
     color: white;
 }
 #howtomake-outer{
     position: relative;
-    width: 100%; height: 700px;
+    width: 100%; height: 680px;
+    text-align: left;
 }
 .howtomake-inner{
     position: absolute;
-    left: 5%;
-    width: 90%; height: 120px;
+    left: 100%;
+    width: 100%; height: 120px;
     background-color: white;
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 .howtomake-inner img{
     position: absolute;
     top:10px; left: 10px;
     width: 100px; height: 100px;
+    border-radius: 50%;
 }
 .howtomake-inner-text{
     position: absolute;
-    top:10px; left: 120px;
-    width: calc(100% - 130px); height: 100px;
+    top: 50%; left: 120px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: calc(100% - 130px);
 }
 .howtomake-inner-text h3{
     font-size: 20px;
     margin: 3px;
 }
 .howtomake-inner-text p{
+    font-size: 16px;
     margin: 2px;
 }
 #make1{
@@ -213,46 +362,91 @@ section#instagram h2{
     top:530px;
 }
 
-/*place*/
-#place{
-    margin: 80px 0px 0px;
-    text-align: center;
+/*place / link*/
+#place,#link{
+    opacity: 0;
 }
 
 /*////footer////*/
 footer{
-    position: relative;
-    width: 100%; height: 100px;
+    width: 100%; height: 80px;
     background-color: #333333;
     color: white;
 }
-footer p#copyright{
-    position: absolute;
-    bottom:5px; left: 100px;
-    width: (100% - 200px);
-    margin: 0; padding: 0;
-    font-size: 16px;
+#footer-inner{
+    position: relative;
+    height: 80px;
 }
-footer #link{
+p#notice{
     position: absolute;
-    bottom:35px; left: 100px;
-    width: (100% - 200px);
+    bottom:48px; left: 0px;
+    width: 100%;
     margin: 0; padding: 0;
-    font-size: 16px;
+    font-size: 8px;
 }
-footer #link a{
-    color: skyblue;
+p#external{
+    position: absolute;
+    bottom:30px; left: 0px;
+    width: 100%;
+    margin: 0; padding: 0;
+    font-size: 8px;
+}
+p#copyright{
+    position: absolute;
+    bottom:8px; left: 0px;
+    width: 100%;
+    margin: 0; padding: 0;
+    font-size: 12px;
 }
 
-@media screen and (max-width: 860px) {
+
+@media screen and (max-width: 1250px) {
+    /*for tablet*/
+    .display-width{
+        width: 90%;
+        margin: auto 5%;
+    }
+
+    @media (orientation: landscape) and (max-height: 600px){
+        #copy{
+            font-size: 40px;
+        }
+        .copy-under{
+            padding: 3px;
+        }
+    
+    }
+}
+
+
+
+@media screen and (max-width: 800px),print{
+    .sp{
+        display: block;
+    }
+    /*for smartphone*/
+    .display-width{
+        width: 95%;
+        margin: auto 2.5%;
+    }
+
     /*header*/
+    header{
+        width: 100%; height: 60px;
+        border: none;
+    }
+    #header-inner{
+        height: 60px;
+    }
     header img{
-        top:5px; left: 5px;
+        top:2.5px; left:2.5px;
+        width: 55px; height: 55px;
     }
     header h1{
-        top:10px;
-        left: 80px; 
-        font-size: 23px;
+        top:7.5px;
+        left: 60px; 
+        line-height:20px;
+        font-size: 20px;
     }
     header h1 span{
         font-size: 15px;
@@ -261,73 +455,205 @@ footer #link a{
         display: none;
     }
 
+    /*instagram message*/
+    #instagram-infomation{
+        position: relative;
+        width: 100%; height: 58px;
+        margin-top: 60px;
+        background-color: #D93177;
+        color: white;
+    }
+    #instagram-infomation-link{
+        position: absolute;
+        top:0; left: 0;
+        width: 100%; height: 58px;
+        color: white;
+        text-decoration:none;
+    }
+    #instagram-infomation-link-logo{
+        position: absolute;
+        top:7.5px; left: 5%;
+        font-size: 40px;
+    }
+    #instagram-infomation-link h2{
+        position: absolute;
+        top:7.5px; left: calc(5% + 45px);
+        margin: 0;
+        font-size: 18px;
+    }
+    #instagram-infomation-link-account{
+        position: absolute;
+        top:30.5px; left: calc(5% + 45px);
+        margin: 0;
+        font-size: 10px;
+    }
+    #instagram-infomation-link-followus{
+        position: absolute;
+        top:14.5px; right: calc(5% + 25px);
+        margin: 0;
+        font-size: 17.5px;
+    }
+    #instagram-infomation-link-right{
+        position: absolute;
+        top:13.5px; right: 5%;
+        font-size: 30px;
+    }
+
     /*top*/
+    section#top-bar{
+        position: relative;
+        width: 100%; height: calc(100vh - 148px);
+        margin-top: 0px;
+    }
     @media (orientation: portrait){
         section#top-bar{
+            height: calc(100vh - 188px);
             background-image: url("/img/main/SP_Vertical.png");
         }
     }
-
-    /*notification*/
-    section#notification{
-        margin: 10px 5%;
+    #copy{
+        font-size: 50px;
+    }
+    @media (orientation: landscape){
+        #copy{
+            font-size: 30px;
+        }
+    }
+    .copy-under{
+        padding: 5px;
+    }
+    #scroll{
+        bottom: 30px;
     }
 
+    /*about*/
+    #about h3{
+        font-size: 25px;
+    }
+
+    /*notification*/
     #twitter,#infomation{
         margin-left: 0; margin-right: 0;
         width: 100%;
+        margin-bottom: 10px;
+    }
+    #twitter-widget-0{
+        height: 300px!important;
+    }
+    @media (orientation: landscape){
+        #twitter-widget-0{
+            height: 200px!important;
+        }
+    }
+    #infomation-list{
+        height: auto;
+        overflow-y: auto;
     }
 
     /*instagram*/
     section#instagram{
-        margin: 10px 0px 0px;
+        margin: 0px;
+        margin-bottom: 10px;
     }
 
     /*howtomake*/
-    #howtomake-inbox{
-        margin: 10px 5% 0px;
+    #howtomake-outer{
+        height: 1060px;
     }
     .howtomake-inner{
-        left: 0px;
-        width: 100%; 
+        height: 200px;
     }
     .howtomake-inner img{
-        top:15px; left: 5px;
-        width: 90px; height: 90px;
+        top:5px;  left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 80px; height: 80px;
+        border-radius: 50%;
     }
     .howtomake-inner-text{
-        top:5px; left: 97px;
-        width: calc(100% - 100px); height: 110px;
+        top: 90px; left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 90%; height: calc(100% - 125px);
+        text-align: center;
     }
     .howtomake-inner-text h3{
-        font-size: 17px;
-        margin: 2px;
+        font-size: 18px;
     }
     .howtomake-inner-text p{
-        font-size: 13px;
-        margin: 1px;
+        font-size: 14px;
+    }
+    #make1{
+        top:10px; 
+    }
+    #make2{
+        top:220px;
+    }
+    #make3{
+        top:430px;
+    }
+    #make4{
+        top:640px;
+    }
+    #make5{
+        top:850px;
     }
 
-    /*place*/
-    #place{
-        margin: 10px 0px 0px;
+    /*link*/
+    #link-inner a{
+        display: inline-block;
+        width: 100%;
     }
+}
 
-    /*////footer////*/
-    footer{
-        position: relative;
-        width: 100%; height: 100px;
-        background-color: #333333;
-        color: white;
+@media print{
+    .section-contents{
+        text-align: left;
     }
-    footer p#copyright{
-        left: 10px;
-        width: (100% - 20px);
-        font-size: 12px;
+    .title-link,#howtomake-inbox h2{
+        color: #002241;
+        text-align: left;
     }
-    footer #link{
-        left: 10px;
-        width: (100% - 20px);
-        font-size: 12px;
+    .title-link h2{
+        text-align: left;
+    }
+    html,body{
+        background: white;
+    }
+    header{
+        position: static;
+    }
+    #instagram-infomation{
+        display: none;
+    }
+    #strong,#robot{
+        opacity: 1!important;
+    }
+    #scroll{
+        display: none;
+    }
+    #notification{
+        opacity: 1;
+    }
+    #twitter{
+        display: none;
+    }
+    #infomation-list li iframe{
+        display: none;
+    }
+    #howtomake{
+        background-color: whitesmoke;
+    }
+    .howtomake-inner{
+        opacity: 1;
+    }
+    #place,#link{
+        opacity: 1;
+    }
+    #place iframe{
+        display: none;
+    }
+    section#top-bar,#top-bar-inner{
+        height: 500px;
     }
 }

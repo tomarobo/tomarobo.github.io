@@ -70,24 +70,54 @@
         <script type="text/javascript" src="/main.js"></script>
     </head>
     <body>
+        <div id="loader">
+            <span class="loader-circle1" id="loader-1"></span>
+            <span class="loader-circle1" id="loader-2"></span>
+            <p>読み込み中</p>
+        </div>
         <header>
-            <img alt="ロボテク" src="/img/robotech-logo.png">
-            <h1><span id="school-name">北海道 苫小牧高専</span><br>ロボットテクノロジー部</h1>
-
-            <div id="header-sns-button">
-                <button id="header-sns-button-instagram" onclick=""><i class="fab fa-instagram"></i></button>
-                <button id="header-sns-button-twitter" onclick=""><i class="fab fa-twitter"></i></button>
+            <div id="header-inner" class="display-width">
+                <img alt="ロボテク" src="/img/robotech-logo.png">
+                <h1><span id="school-name">北海道 苫小牧高専</span><br>ロボットテクノロジー部</h1>
+                <div id="header-sns-button">
+                    <button aria-label="Instagram" id="header-sns-button-instagram" onclick="window.open('https:\/\/www.instagram.com/TmNCT_robotech/', '_blank')"><i class="fab fa-instagram"></i></button>
+                    <button aria-label="Twitter" id="header-sns-button-twitter" onclick="window.open('https:\/\/twitter.com/TmNCT_robotech', '_blank')"><i class="fab fa-twitter"></i></button>
+                </div>
             </div>
         </header>
         <main>
+            <div id="instagram-infomation" class="sp">
+                <a id="instagram-infomation-link" href="https://www.instagram.com/TmNCT_robotech/"  target="_blank" rel="nofollow">
+                    <i id="instagram-infomation-link-logo" class="fab fa-instagram"></i>
+                    <h2>Instagram</h2>
+                    <p id="instagram-infomation-link-account">TmNCT_robotech</p>
+                    <p id="instagram-infomation-link-followus">follow us</p>
+                    <i id="instagram-infomation-link-right" class="fas fa-angle-right"></i>
+                </a>
+            </div>
             <section id="top-bar">
-                 
+                <div id="top-bar-inner" class="display-width">
+                    <h2 id="copy">
+                        <span class="copy-under"><span id="make-text">つくる</span>んだ、</span><br>
+                        <span id="strong" class="copy-under" style="opacity: 0;">「強い」</span><br>
+                        <span id="robot" class="copy-under" style="opacity: 0;"><span style="color: yellow">ロボット</span>を。</span>
+                    </h2>
+                    <a id="scroll" href="#scroll" title="タイトル">
+                        <span id="scroll_move"></span>
+                    </a>
+                </div>
             </section>
-            <section id="notification">
+            <div id="about-outer">
+                <section id="about" class="display-width">
+                    <h3>私たちは、<br class="sp"><a href="https://official-robocon.com/kosen/" target="_blank" rel="nofollow">高専ロボコン<i class="fas fa-external-link-alt"></i></a>に出場する<br class="sp">ロボットを作る部活です。</h3>
+                </section>
+            </div>
+            <section id="notification" class="display-width section-contents">
                 <div id="twitter">
-                    <a class="title-link" href="https://twitter.com/TmNCT_robotech"><h2>Twitter</h2></a>
+                    <a class="title-link" href="https://twitter.com/TmNCT_robotech"  target="_blank" rel="nofollow"><h2>Twitter <i class="fas fa-external-link-alt"></i></h2></a>
                     <div id="twitter-outer">
-                        <a class="twitter-timeline" data-lang="ja" data-width="100%" data-height="500px" data-theme="light" href="https://twitter.com/TmNCT_robotech?ref_src=twsrc%5Etfw" data-chrome=”noheader” data-chrome=”nofooter”>閲覧できない場合はこちらからTwitterを開いてください</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" data-lang="ja" data-width="100%" data-height="500px" data-theme="light" href="https://twitter.com/TmNCT_robotech?ref_src=twsrc%5Etfw" data-chrome=”noheader” data-chrome=”nofooter”  target="_blank" rel="nofollow">閲覧できない場合はこちらからTwitterを開いてください <i class="fas fa-external-link-alt"></i></a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
                 <div id="infomation">
@@ -95,34 +125,34 @@
                     <ul id="infomation-list">
                         <li>
                             <h3>ホームページを作成しました。</h3>
-                            <p>ホームページを既存のWikiから変更し、スマートフォンなどで見やすくなりました。</p>
+                            <p>スマートフォンやタブレット端末で見やすいホームページとなりました。</p>
                         </li>
                         <li>
                             <h3>2019年度の大会は全国大会に出場</h3>
-                            <p>2019年度の大会では、Aチームのロボット"トマイオマイ”が審査員の推薦をいただき、
+                            <p>2019年度の大会では、Aチームのロボット"トマイオマイ”が
                                 全国大会に出場することができました。
                                 (2020年度は新型コロナウィルスの感染拡大に伴う学校側の課外活動の制限により
                                 活動が難しいと判断をし大会への参加を断念しました）
                             </p>
                             <p>
                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/K27lRB6oT-0?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <a href="https://youtu.be/K27lRB6oT-0">閲覧できない場合はこちらからYouTubeを開いてください。</a>
+                                <a href="https://youtu.be/K27lRB6oT-0" target="_blank" rel="nofollow">閲覧できない場合はこちらからYouTubeを開いてください。<i class="fas fa-external-link-alt"></i></a>
                             </p>
                         </li>
                     </ul>
                 </div>
             </section>
             <!--
-            <section id="instagram">
-                <a class="title-link" href="https://www.instagram.com/TmNCT_robotech/"><h2>Instagram</h2></a>
+            <section id="instagram" class="display-width section-contents">
+                <a class="title-link" href="https://www.instagram.com/TmNCT_robotech/"  target="_blank" rel="nofollow"><h2>Instagram<i class="fas fa-external-link-alt"></i></h2></a>
                 <div id="SnapWidget-outer">
 
                 </div>
             </section>
             -->
             <section id="howtomake">
-                <div id="howtomake-inbox">
-                    <h2 class="title-link">ロボットができるまで</h2>
+                <div id="howtomake-inbox" class="display-width section-contents">
+                    <h2 class="title-link">私たちの活動</h2>
                     <div id="howtomake-outer">
                         <div class="howtomake-inner" id="make1">
                             <img alt="ルールブック" src="/img/howtomake/idea@0.5x.png">
@@ -146,7 +176,7 @@
                         <div class="howtomake-inner" id="make3">
                             <img alt="ソースコードが書いてあるディスプレイ" src="/img/howtomake/code@0.5x.png">
                             <div class="howtomake-inner-text">
-                                <h3>加工/プログラミング/組立て</h3>
+                                <h3>加工・プログラミング・組立て</h3>
                                 <p>
                                     機械（設計や組み立て)、ハードウェア、
                                     ソフトウェアを担当するグループに分かれてロボットを作り上げていきます。
@@ -156,7 +186,7 @@
                         <div class="howtomake-inner" id="make4">
                             <img  alt="洗濯物を掛けるロボット" src="/img/howtomake/training@0.5x.png">
                             <div class="howtomake-inner-text">
-                                <h3>ロボットの試走/改善</h3>
+                                <h3>ロボットの試走・改善</h3>
                                 <p>
                                     夏には合宿を行い、ロボットを動かしながら改善点を見つけていきます。
                                 </p>
@@ -175,20 +205,26 @@
                     </div>
                 </div>
             </section>
-            <section id="place">
+            <section id="place" class="display-width section-contents">
                 <h2 class="title-link">活動場所</h2>
                 <p> 
                     苫小牧高専 環境棟玄関（学術情報センター/寮側）より樽前広場の先にあるプレハブ倉庫で主に平日の16時から18時まで活動しています。
                 </p>
                 <iframe width="100%" height="315" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d520.1727181159928!2d141.49508712121485!3d42.62426748863378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f7514173752d159%3A0xc62ed098a3f2a308!2z44CSMDU5LTEyNzUg5YyX5rW36YGT6Iur5bCP54mn5biC6Yym5bKhIOaWh-enkeezu-OCteODvOOCr-ODq-WupA!5e0!3m2!1sja!2sjp!4v1617391725063!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </section>
+            <section id="link" class="display-width section-contents">
+                <h2 class="title-link">関連リンク</h2>
+                <p id="link-inner">
+                    <a href="https://official-robocon.com/kosen/" target="_blank" rel="nofollow">高専ロボコン(NHKエンタープライズ) <i class="fas fa-external-link-alt"></i></a><br>
+                    <a href="https://www.tomakomai-ct.ac.jp/" target="_blank" rel="nofollow">苫小牧工業高等専門学校 <i class="fas fa-external-link-alt"></i></a>
+                </p>
+            </section>
         <footer>
-            <p id="copyright">Copyright 2021 Robotech Tomakomai</p>
-            <p id="link">
-                <i class="fas fa-angle-right"></i> <a href="https://official-robocon.com/kosen/">高専ロボコン(NHKエンタープライズ)</a><br>
-                <i class="fas fa-angle-right"></i> <a href="https://www.tomakomai-ct.ac.jp/">苫小牧工業高等専門学校</a>
-            </p>
+            <div id="footer-inner" class="display-width">
+                <p id="notice">当部活ではこのページの掲載内容によって発生したトラブルについて一切の責任を負いません。</p>
+                <p id="external"><i class="fas fa-external-link-alt"></i>は外部リンクです。別のタブで開きます。</p>
+                <p id="copyright">Copyright 2021 Robotech Tomakomai</p>
+            </div>
         </footer>
     </body>
-
 </html>
