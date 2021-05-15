@@ -1,12 +1,12 @@
 {
-	"name":				"",
-	"short_name":		"",
-	"description":		"",
+	"name":				"Robotech",
+	"short_name":		"Tomakomai Robotech",
+	"description":		"苫小牧工業高等専門学校 ロボットテクノロジー部",
 	"start_url":		"/",
 	"display":			"standalone",
 	"orientation":		"any",
-	"background_color":	"#fff",
-	"theme_color":		"#fff",
+	"background_color":	"#ffffff",
+	"theme_color":		"#002241",
 	"orientation":		"any",
 	"icons": [
 		{

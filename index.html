@@ -62,6 +62,20 @@
         <meta name="format-detection" content="telephone=no,email=no,address=no">
         <meta name="google" content="notranslate">
 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="ロボテク">
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('ServiceWorker.js')
+                  .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                });
+            }
+            self.addEventListener('fetch', function(e) {})
+        </script>
+
         <!--外部ファイル読み込み-->
         <script src="https://kit.fontawesome.com/57d7927719.js" crossorigin="anonymous"></script>
 
