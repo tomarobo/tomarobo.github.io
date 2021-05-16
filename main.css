@@ -316,7 +316,7 @@ section#top-bar{
 #iframe-window{
     position: fixed;
     top:0; left: 0;
-    width: 100%; height: 100vh;
+    width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 90;
     opacity: 0;
@@ -350,12 +350,14 @@ section#top-bar{
 #iframe-window-contents{
     position: absolute;
     top: 70px; right: 0;
-    width: 100%; height: calc(100% - 80px);
+    width: 100%; height: calc(100% - 120px);
     overflow-y: scroll;
 }
 #iframe-window-contents a{
     background-color: whitesmoke;
+    font-size: 12px;
     padding: 5px;
+    text-align: left;
 }
 .youtube-video{
     position: relative;
@@ -473,6 +475,13 @@ footer{
     .display-width{
         width: 90%;
         margin: auto 5%;
+    }
+    @media (orientation: landscape){
+        #iframe-window-contents{
+            top: 0px; right: auto; left: 0;
+            width: calc(100% - 70px);
+            height: 100%;
+        }
     }
 
     @media (orientation: landscape) and (max-height: 600px){
@@ -622,6 +631,31 @@ footer{
         height: auto;
         overflow-y: auto;
     }
+    #iframe-window-inner{
+        margin-top: 65px;
+        height: calc(100% - 80px);
+    }
+    #iframe-window-contents{
+        top: 70px; right: 0;
+        height: calc(100% - 80px);
+    }
+    @media (orientation: landscape){
+        #iframe-window-inner{
+            height: calc(100% - 70px);
+        }
+        #iframe-window-contents{
+            top: 0px; right: auto; left: 0;
+            width: calc(100% - 65px);
+            height: 100%;
+        }
+    }
+    @media (orientation: portrait){
+        #iframe-window-contents iframe{
+            max-height: 60%;
+        }
+    }
+
+
 
     /*instagram*/
     section#instagram{

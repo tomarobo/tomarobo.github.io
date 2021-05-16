@@ -154,7 +154,7 @@ function scroll(){
 
 function youtube(iframe_url,sub_url){
     var display = '<iframe width="100%" height="90%" src="'+iframe_url+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-    display += '<a href="'+sub_url+'" target="_blank" rel="noopener">閲覧できない場合はこちらからYouTubeを開いてください。<i class="fas fa-external-link-alt"></i></a>';
+    display += '<a class="youtube-info" href="'+sub_url+'" target="_blank" rel="noopener">閲覧できない場合はこちらからYouTubeを開いてください。<i class="fas fa-external-link-alt"></i></a>';
     document.getElementById("iframe-window-contents").innerHTML = display;
 
     document.getElementById("iframe-window").style.display = "block";
