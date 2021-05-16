@@ -195,9 +195,15 @@ header h1 span{
 section#top-bar{
     width: 100%; height: calc(100vh - 150px);
     margin-top: 80px;
-    background-image: url("/img/main/PC_width.png");
     background-size:cover;
 }
+.webp section#top-bar{
+    background-image: url("/img/main/PC_width.webp");
+}
+.no-webp section#top-bar{
+    background-image: url("/img/main/PC_width.png");
+}
+
 #top-bar-inner{
     position: relative;
     height: calc(100vh - 150px);
@@ -302,6 +308,79 @@ section#top-bar{
     margin-bottom: 20px;
     padding: 5px;
     background-color: white;
+}
+#infomation-list li img{
+    width: 100%;
+}
+
+#iframe-window{
+    position: fixed;
+    top:0; left: 0;
+    width: 100%; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 90;
+    opacity: 0;
+    display: none;
+}
+#iframe-window-inner{
+    position: relative;
+    margin-top: 90px;
+    height: calc(100% - 110px);
+}
+#iframe-window-close{
+    position: absolute;
+    top:5px; right: 5px;
+    width: 55px; height: 55px;
+    padding: 0;
+    border: none;
+    border-radius: 27.5px;
+    outline: none;
+    background-color: white;
+    font-size: 45px;
+    color: #333333;
+    transition: all 0.5s ease;
+}
+#iframe-window-close:hover,#iframe-window-close:active,#iframe-window-close:focus{
+    top:0px; right: 0px;
+    width: 65px; height: 65px;
+    border-radius: 37.5px;
+    background-color: #002241;
+    color: white;
+}
+#iframe-window-contents{
+    position: absolute;
+    top: 70px; right: 0;
+    width: 100%; height: calc(100% - 80px);
+    overflow-y: scroll;
+}
+#iframe-window-contents a{
+    background-color: whitesmoke;
+    padding: 5px;
+}
+.youtube-video{
+    position: relative;
+    z-index: 29;
+}
+.youtube-video::after{
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100px; height: 100px;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    content: "\f167";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Brands";
+    color: #FF0000;
+    font-size: 90px;
+    text-shadow:0 0 20px white;
+    z-index: 30;
+    transition: all 0.5s ease;
+}
+.youtube-video:hover::after{
+    text-shadow:0 0 100px white;
+}
+.youtube-video img{
+    width: 100%;
 }
 
 /*instagram*/
@@ -497,6 +576,11 @@ footer{
     @media (orientation: portrait){
         section#top-bar{
             height: calc(100vh - 188px);
+        }
+        .webp section#top-bar{
+            background-image: url("/img/main/SP_Vertical.webp");
+        }
+        .no-webp section#top-bar{
             background-image: url("/img/main/SP_Vertical.png");
         }
     }
