@@ -106,21 +106,25 @@
     </head>
     <body>
         <div id="loader">
+            <!--ロード画面(JSによりonload後に透明化→非表示になる)-->
             <span class="loader-circle1" id="loader-1"></span>
             <span class="loader-circle1" id="loader-2"></span>
             <p>読み込み中</p>
         </div>
         <header>
+            <!--header(上部に固定表示)-->
             <div id="header-inner" class="display-width">
                 <img alt="ロボテク" src="/img/robotech-logo.png">
                 <h1><span id="school-name">北海道 苫小牧高専</span><br>ロボットテクノロジー部</h1>
                 <div id="header-sns-button">
+                    <!--PC / TBのみ表示-->
                     <button aria-label="Instagram" id="header-sns-button-instagram" onclick="window.open('https:\/\/www.instagram.com/TmNCT_robotech/', '_blank')"><i class="fab fa-instagram"></i></button>
                     <button aria-label="Twitter" id="header-sns-button-twitter" onclick="window.open('https:\/\/twitter.com/TmNCT_robotech', '_blank')"><i class="fab fa-twitter"></i></button>
                 </div>
             </div>
         </header>
         <main>
+            <!--Instagramリンク SPのみ表示-->
             <div id="instagram-infomation" class="sp">
                 <a id="instagram-infomation-link" href="https://www.instagram.com/TmNCT_robotech/"  target="_blank" rel="noopener">
                     <i id="instagram-infomation-link-logo" class="fab fa-instagram"></i>
@@ -152,9 +156,6 @@
                     <a class="title-link" href="https://twitter.com/TmNCT_robotech"  target="_blank" rel="noopener"><h2>Twitter <i class="fas fa-external-link-alt"></i></h2></a>
                     <div id="twitter-outer">
                         <a class="twitter-timeline" data-lang="ja" data-width="100%" data-height="500px" data-theme="light" href="https://twitter.com/TmNCT_robotech?ref_src=twsrc%5Etfw" data-chrome=”noheader” data-chrome=”nofooter”  target="_blank" rel="noopener">閲覧できない場合はこちらからTwitterを開いてください <i class="fas fa-external-link-alt"></i></a>
-                        <!--
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        -->
                         <span id="twitter-js"></span>
                     </div>
                 </div>
@@ -162,8 +163,13 @@
                     <h2 class="title-link">Infomation</h2>
                     <ul id="infomation-list">
                         <li>
-                            <h3>ホームページを作成しました。</h3>
+                            <h3>ホームページを作成しました!</h3>
                             <p>スマートフォンやタブレット端末で見やすいホームページとなりました。</p>
+                        </li>
+                        <li>
+                            <h3>公式Instagramを開設しました!</h3>
+                            <p>苫小牧高専ロボテクの公式インスタを開設しました。</p>
+                            <p><a class="ex-link" href="https://www.instagram.com/TmNCT_robotech/" target="_blank" rel="noopener">Instagram (tmnct_robotech)</a></p>
                         </li>
                         <li>
                             <h3>2019年度の大会は全国大会に出場</h3>
@@ -180,7 +186,7 @@
                             </p>
                         </li>
                     </ul>
-                    <!--Youtube再生用-->
+                    <!--Youtube再生用(YouTubeリンク押下後にJSで表示)-->
                     <div id="iframe-window" onclick="close_window()">
                         <div class="display-width" id="iframe-window-inner">
                             <button id="iframe-window-close" onclick="close_window()" aria-label="ホップアップを閉じる"><i class="fas fa-times"></i></button>
@@ -189,14 +195,11 @@
                     </div>
                 </div>
             </section>
-            <!--
             <section id="instagram" class="display-width section-contents">
-                <a class="title-link" href="https://www.instagram.com/TmNCT_robotech/"  target="_blank" rel="noopener"><h2>Instagram<i class="fas fa-external-link-alt"></i></h2></a>
-                <div id="SnapWidget-outer">
-
-                </div>
+                <a class="title-link" href="https://www.instagram.com/TmNCT_robotech/"  target="_blank" rel="noopener"><h2>Instagram <i class="fas fa-external-link-alt"></i></h2></a>
+                <!-- SnapWidget -->
+                <span id="instagram-iframe"></span>
             </section>
-            -->
             <section id="howtomake">
                 <div id="howtomake-inbox" class="display-width section-contents">
                     <h2 class="title-link">私たちの活動</h2>
@@ -248,7 +251,6 @@
                                 </p>
                             </div>
                         </div>
-                        <span id="howtomake-line"></span>
                     </div>
                 </div>
             </section>
@@ -257,6 +259,7 @@
                 <p> 
                     苫小牧高専 環境棟玄関（学術情報センター/寮側）より樽前広場の先にあるプレハブ倉庫で主に平日の16時から18時まで活動しています。
                 </p>
+                <!--Google Mapsを遅延読み込み-->
                 <span id="google-map"></span>
             </section>
             <section id="link" class="display-width section-contents">

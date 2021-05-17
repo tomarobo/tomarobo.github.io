@@ -60,6 +60,7 @@ html,body{
     -webkit-text-size-adjust: 100%; /*iOS 横画面文字サイズ対策*/
     font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Yu Gothic',sans-serif;
     color: #333333;
+    scroll-behavior: smooth;
 }
 
 /*load*/
@@ -230,6 +231,7 @@ section#top-bar{
     -webkit-transform: translateX(-50%);
     width: 80px; height: 80px;
     margin: 0;
+    outline: none;
 }
 #scroll_move{
     position: absolute;
@@ -281,6 +283,7 @@ section#top-bar{
 /*notification*/
 #notification{
     opacity: 0;
+    margin-bottom: 10px;
 }
 #twitter{
     display: inline-block;
@@ -311,6 +314,43 @@ section#top-bar{
 }
 #infomation-list li img{
     width: 100%;
+}
+
+.ex-link{
+    margin-right: 20px;
+}
+.ex-link:after{
+    content: "\f35d";
+    font-family: FontAwesome;
+    color: #333333;
+    margin-left: 5px;
+}
+.pdf-link{
+    margin-right: 20px;
+}
+.pdf-link:after{
+    content: "\f1c1";
+    font-family: FontAwesome;
+    color: #de3021;
+    margin-left: 5px;
+}
+.word-link{
+    margin-right: 20px;
+}
+.word-link:after{
+    content: "\f1c2";
+    font-family: FontAwesome;
+    color:#3263bf;
+    margin-left: 5px;
+}
+.excel-link{
+    margin-right: 20px;
+}
+.excel-link:after{
+    content: "\f1c3";
+    font-family: FontAwesome;
+    color:#3a7e4a;
+    margin-left: 5px;
 }
 
 #iframe-window{
@@ -359,6 +399,7 @@ section#top-bar{
     padding: 5px;
     text-align: left;
 }
+
 .youtube-video{
     position: relative;
     z-index: 29;
@@ -386,8 +427,8 @@ section#top-bar{
 }
 
 /*instagram*/
-#SnapWidget-outer{
-    margin-top: 20px;  margin-bottom: 20px;
+#instagram{
+    opacity: 0;
 }
 
 /*howtomake*/
@@ -614,6 +655,9 @@ footer{
     }
 
     /*notification*/
+    #notification{
+        margin-bottom: 10px;
+    }
     #twitter,#infomation{
         margin-left: 0; margin-right: 0;
         width: 100%;
@@ -658,10 +702,6 @@ footer{
 
 
     /*instagram*/
-    section#instagram{
-        margin: 0px;
-        margin-bottom: 10px;
-    }
 
     /*howtomake*/
     #howtomake-outer{
