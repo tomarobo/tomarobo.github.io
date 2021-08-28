@@ -396,7 +396,7 @@ section#top-bar{
     #notification{
         margin-bottom: 10px;
     }
-    #twitter,#infomation{
+    #twitter,#information{
         margin-left: 0; margin-right: 0;
         width: 100%;
         margin-bottom: 10px;
@@ -410,8 +410,8 @@ section#top-bar{
         }
     }
 
-    /*////Infomation////*/
-    #infomation-list{
+    /*////Information////*/
+    #information-list{
         height: auto;
         overflow-y: auto;
     }
@@ -469,7 +469,7 @@ section#top-bar{
     #strong,#robot,#notification,#place,#link{
         opacity: 1!important;
     }
-    #instagram-infomation,#twitter,#infomation-list li iframe,#place iframe{
+    #twitter,#information-list li iframe,#place iframe{
         display: none;
     }
     section#top-bar,#top-bar-inner{
