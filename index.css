@@ -1,0 +1,478 @@
+@charset 'UTF-8'; /*文字コード*/
+/*Copyright 2021 Robotech Tomakomai*/
+
+/*/////////////////////トップページ専用/////////////////////*/
+
+/*////タイトル////*/
+.title-link{
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: #333333;
+    text-decoration:none;
+    text-align: center;
+}
+.title-link h2{
+    margin-bottom: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+a.title-link:hover{
+    color: gray;
+    text-decoration:none;
+}
+.title-link .fa-external-link-alt{
+    color: gray;
+    font-size: 18px;
+}
+
+
+/*////上部の画像の部分////*/
+section#top-bar{
+    width: 100%; height: calc(100vh - 240px);
+    min-height: 400px;
+    margin-top: 80px;
+    background-size:cover;
+}
+section#top-bar{
+    background-image: url("/img/main/PC_width.webp");
+}
+
+#top-bar-inner{
+    position: relative;
+    height: calc(100vh - 150px);
+}
+#copy{
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    margin: 0;
+    font-size: 80px;
+    color: white;
+    text-align: right;
+}
+.copy-under{
+    background-color: #002241;
+    padding: 10px;
+}
+
+
+/*////紺色の部分////*/
+#about-outer{
+    background-color: #002241;
+    padding: 20px;
+    text-align: center;
+}
+#about h3{
+    font-size: 28px;
+    margin: 0;
+    color: whitesmoke;
+}
+#about h3 a{
+    color: whitesmoke;
+}
+#about h3 a:hover,#about h3 a:active,#about h3 a:focus{
+    color: skyblue;
+    text-decoration:none;
+}
+#about h3 a i{
+    font-size: 16px;
+}
+
+
+/*////ロボット紹介リンクエリア////*/
+#robocon-link,#joinus-link{
+    border: solid 4px #002241;
+    margin: 10px auto;
+    background-color: white;
+}
+#robocon-link a,#joinus-link a{
+    display: inline-block;
+    width: 100%; height: 100%;
+    padding: 10px 0;
+    text-decoration:none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+#robocon-link a:hover,#robocon-link a:active,#robocon-link a:focus,#joinus-link a:hover,#joinus-link a:active,#joinus-link a:focus{
+    background-color: yellow;
+}
+
+
+/*////お知らせエリア////*/
+#notification{
+    opacity: 0;
+    margin-bottom: 10px;
+    transition: all 0.5s 0s ease;
+}
+#twitter{
+    display: inline-block;
+    margin-right: 1%;
+    vertical-align: top;
+    width: 48.5%;
+}
+
+/*////Information////*/
+#information{
+    display: inline-block;
+    margin-left: 1%;
+    vertical-align: top;
+    width: 48.5%;
+}
+#information-list{
+    margin: 0;
+    padding: 0;
+    height: 490px;
+    padding: 0 10px 10px 10px;
+    overflow-y: scroll;
+}
+#information-list li{
+    list-style: none;
+    width: calc(100% - 10px);
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: white;
+}
+#information-list li img{
+    width: 100%;
+}
+
+.ex-link{
+    margin-right: 20px;
+}
+.ex-link:after{
+    content: "\f35d";
+    font-family: FontAwesome;
+    color: #333333;
+    margin-left: 5px;
+}
+.pdf-link{
+    margin-right: 20px;
+}
+.pdf-link:after{
+    content: "\f1c1";
+    font-family: FontAwesome;
+    color: #de3021;
+    margin-left: 5px;
+}
+.word-link{
+    margin-right: 20px;
+}
+.word-link:after{
+    content: "\f1c2";
+    font-family: FontAwesome;
+    color:#3263bf;
+    margin-left: 5px;
+}
+.excel-link{
+    margin-right: 20px;
+}
+.excel-link:after{
+    content: "\f1c3";
+    font-family: FontAwesome;
+    color:#3a7e4a;
+    margin-left: 5px;
+}
+
+#iframe-window{
+    position: fixed;
+    top:0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 90;
+    opacity: 0;
+    display: none;
+}
+#iframe-window-inner{
+    position: relative;
+    margin-top: 90px;
+    height: calc(100% - 110px);
+}
+#iframe-window-close{
+    position: absolute;
+    top:5px; right: 5px;
+    width: 55px; height: 55px;
+    padding: 0;
+    border: none;
+    border-radius: 27.5px;
+    outline: none;
+    background-color: white;
+    font-size: 45px;
+    color: #333333;
+    transition: all 0.5s ease;
+}
+#iframe-window-close:hover,#iframe-window-close:active,#iframe-window-close:focus{
+    top:0px; right: 0px;
+    width: 65px; height: 65px;
+    border-radius: 37.5px;
+    background-color: #002241;
+    color: white;
+}
+#iframe-window-contents{
+    position: absolute;
+    top: 70px; right: 0;
+    width: 100%; height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+#iframe-window-contents a{
+    background-color: whitesmoke;
+    font-size: 12px;
+    padding: 5px;
+    text-align: left;
+}
+
+/*ホップアップ*/
+.youtube-video{
+    width: 100%;
+    position: relative;
+    z-index: 29;
+}
+.youtube-video::after{
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100px; height: 100px;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    content: "\f167";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Brands";
+    color: #FF0000;
+    font-size: 90px;
+    text-shadow:0 0 20px white;
+    z-index: 30;
+    transition: all 0.5s ease;
+}
+.youtube-video:hover::after{
+    text-shadow:0 0 100px white;
+}
+.youtube-video img{
+    width: 100%;
+}
+
+
+/*////インスタグラム表示（snapwidget)////*/
+#instagram{
+    opacity: 0;
+    transition: all 0.5s 0s ease;
+}
+
+
+/*////活動紹介エリア)////*/
+#activity{
+    background-color: #002241;
+    padding: 20px 0;
+}
+#activity-inner .title-link{
+    color: white;
+}
+#activity-inner-box-outer{
+    width: 100%; padding: 20px 0;
+    display: flex;
+    gap: 20px 5%;
+    justify-content: center;
+    flex-wrap:wrap;
+    opacity: 0;
+    transition: all 0.5s 0s ease;
+}
+.activity-inner-box{
+    width: 45%; height: 200px;
+    display: grid;
+    gap: 20px 5%;
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+}
+.activity-inner-inner{
+    position: relative;
+    width: 100%; height: 100%;
+    background-color:rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(3px);
+}
+#activity-inner p{
+    font-size: 14px; color: white;
+    text-align: left;
+}
+.activity-inner-inner-number{
+    position: absolute;
+    width: 40px; height: 40px;
+    left: 0; top: 0;
+    color: #002241;background-color: yellow;
+    font-size: 25px; font-weight: 600;
+    line-height: 40px;
+}
+.activity-inner-inner-text{
+    position: absolute;
+    width: calc(100% - 10px); max-height: calc(100% - 20px);
+    left:5px; bottom: 10px; margin: 0; padding: 0;
+    text-align: left;
+}
+.activity-inner-inner-title{
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+}
+.activity-inner-inner-detail{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/*////活動場所・外部リンク////*/
+#place,#link{
+    opacity: 0;
+    transition: all 0.5s 0s ease;
+}
+
+
+
+
+/*/////////////////////レスポンシブ対応/////////////////////*/
+/*タブレット*/
+@media screen and (max-width: 1250px) {
+    @media (orientation: landscape){
+        #iframe-window-contents{
+            top: 0px; right: auto; left: 0;
+            width: calc(100% - 70px);
+            height: 100%;
+        }
+    }
+
+    @media (orientation: landscape) and (max-height: 600px){
+        #copy{
+            font-size: 40px;
+        }
+        .copy-under{
+            padding: 3px;
+        }
+    
+    }
+}
+
+
+/*スマートフォン・印刷*/
+@media screen and (max-width: 820px),screen and (max-height: 700px),print{
+    /*////上部の画像の部分////*/
+    section#top-bar{
+        margin-top: 60px;
+    }
+
+    @media (orientation: portrait){
+        section#top-bar{
+            height: calc(100vh - 188px);
+        }
+        section#top-bar{
+            background-image: url("/img/main/SP_Vertical.webp");
+        }
+    }
+    @media (orientation: landscape){
+        section#top-bar{
+            min-height: 260px;
+        }
+    }
+
+    #copy{
+        font-size: 50px;
+    }
+    @media (orientation: landscape){
+        #copy{
+            font-size: 30px;
+        }
+    }
+    .copy-under{
+        padding: 5px;
+    }
+
+    /*////紺色の部分////*/
+    #about h3{
+        font-size: 25px;
+    }
+
+    /*////お知らせエリア////*/
+    #notification{
+        margin-bottom: 10px;
+    }
+    #twitter,#infomation{
+        margin-left: 0; margin-right: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #twitter-widget-0{
+        height: 300px!important;
+    }
+    @media (orientation: landscape){
+        #twitter-widget-0{
+            height: 200px!important;
+        }
+    }
+
+    /*////Infomation////*/
+    #infomation-list{
+        height: auto;
+        overflow-y: auto;
+    }
+    #iframe-window-inner{
+        margin-top: 65px;
+        height: calc(100% - 80px);
+    }
+    #iframe-window-contents{
+        top: 70px; right: 0;
+        height: calc(100% - 80px);
+    }
+    @media (orientation: landscape){
+        #iframe-window-inner{
+            height: calc(100% - 70px);
+        }
+        #iframe-window-contents{
+            top: 0px; right: auto; left: 0;
+            width: calc(100% - 65px);
+            height: 100%;
+        }
+    }
+    @media (orientation: portrait){
+        #iframe-window-contents iframe{
+            max-height: 60%;
+        }
+    }
+
+
+    /*////活動紹介エリア)////*/
+    #activity-inner-box-outer{
+        gap: 15px 0;
+    }
+    .activity-inner-box{
+        width: 100%; height: 170px;
+        gap: 15px 0;
+    }
+    
+    /*link*/
+    #link-inner a{
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+
+/*印刷*/
+@media print{
+    .title-link,#howtomake-inbox h2{
+        color: #002241;
+        text-align: left;
+    }
+    .title-link h2{
+        text-align: left;
+    }
+    #strong,#robot,#notification,#place,#link{
+        opacity: 1!important;
+    }
+    #instagram-infomation,#twitter,#infomation-list li iframe,#place iframe{
+        display: none;
+    }
+    section#top-bar,#top-bar-inner{
+        height: 500px;
+    }
+}

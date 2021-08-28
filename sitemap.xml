@@ -3,8 +3,19 @@
 <url>
     <loc>https://tomarobo.github.io/</loc>
     <priority>1.0</priority>
-    <lastmod>2021-05-15T22:50:22+09:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2021-08-28T22:50:22+09:00</lastmod>
+    <changefreq>monthly</changefreq>
 </url>
-
+<url>
+    <loc>https://tomarobo.github.io/robocon/</loc>
+    <priority>1.0</priority>
+    <lastmod>2021-08-28T22:50:22+09:00</lastmod>
+    <changefreq>yearly</changefreq>
+</url>
+<url>
+    <loc>https://tomarobo.github.io/joinus/</loc>
+    <priority>1.0</priority>
+    <lastmod>2021-08-28T22:50:22+09:00</lastmod>
+    <changefreq>yearly</changefreq>
+</url>
 </urlset>

@@ -1,0 +1,281 @@
+@charset 'UTF-8'; /*文字コード*/
+/****************** 共通CSS ******************/
+/*Copyright 2021 Robotech Tomakomai*/
+
+/*
+    margin：外側の余白
+    padding：内側の余白
+
+*/ 
+
+/*/////////////////////共通/////////////////////*/
+
+/*////レスポンシブ対応////*/
+.sp{/*スマートフォンのみ*/
+    display: none;                                  /*表示しない（スマートフォンでの表示）*/
+}
+
+
+
+/*////メイン////*/
+html,body{
+    margin: 0; padding: 0;                          /*余白*/
+    overflow-x : hidden; overflow-y : auto;         /*スクロール*/
+    background-color: whitesmoke;                 /*背景色*/
+    -webkit-text-size-adjust: 100%;                 /*iOS 横画面文字サイズ対策*/
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Yu Gothic',sans-serif; /*フォント*/
+    color: #333333;                               /*文字色*/
+}
+
+/*////本文標準余白////*/
+.display-width{
+    width: 1200px;                                  /*幅*/
+    margin: auto auto;                              /*余白*/
+}
+
+/*////本文領域////*/
+.section-contents{
+    margin-top:  10px;                              /*余白（上）*/
+    margin-bottom: 20px;                            /*余白（下）*/
+    text-align: center;                             /*文字中央寄せ*/
+}
+
+/*////本文文章////*/
+p{
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,YuGothic,'Yu Gothic',sans-serif;/*フォント*/
+}
+
+/*////リンク////*/
+a{
+    color: #0066c0;                               /*文字色*/
+    text-decoration:none;                           /*リンク下線非表示*/
+    transition: all 0.5s ease;                      /*アニメーション(0.5s)*/
+}
+a:hover{/*ホバー時*/
+    color: #0033cc;                               /*文字色*/
+    text-decoration:underline;                      /*リンク下線表示*/
+}
+
+
+
+/*////共通ヘッダー部分////*/
+header{
+    position: fixed;                                /*配置(要素を固定)*/
+    top:0; left:0;                                  /*上部と左に固定*/
+    width: 100%; height: 80px;                      /*サイズの指定(width：幅 / height：高さ）*/
+    background-color: white;                      /*背景色*/
+    border-bottom: solid 1px whitesmoke;          /*枠線（下側）1px*/
+    z-index: 99;                                    /*配置の順番(99番目)*/
+}
+#header-inner{
+    position: relative;                             /*配置(移動するときの基準)*/
+    height: 80px;                                   /*高さ*/
+}
+header img{/*header内の画像*/
+    position: absolute;                             /*配置(絶対配置)*/
+    top:2.5px; left: 2.5px;                         /*位置指定*/
+    width: 75px; height: 75px;                      /*サイズ*/
+    cursor: pointer;                                /*カーソル（ポインター）*/
+}
+header h1{/*headerの文字*/
+    position: relative;                             /*配置(移動するときの基準)*/
+    top:8px; left: 80px;                            /*位置指定*/
+    width: 500px; height: 60px;                     /*サイズ*/
+    margin: 0;                                      /*余白*/
+    line-height:30px;                               /*文字を上下中央にするために行の高さを調整*/
+    font-size: 25px;                                /*フォントサイズ*/
+    cursor: pointer;                                /*カーソル（ポインター）*/
+}
+header h1 span{ /*「北海道　苫小牧高専」の部分*/
+    font-size: 18px;                                /*フォントサイズ*/
+}
+
+#header-sns-button button{/*SNSボタン*/
+    position: absolute;                             /*配置(絶対配置)*/
+    padding: 0;                                     /*余白なし*/
+    border: none;                                   /*枠線なし*/
+    outline: none;                                  /*選択時の枠線*/
+    font-size: 30px;                                /*フォントサイズ*/
+    -webkit-appearance: none;                       /*iOSの表示の調整*/
+}
+#header-sns-button-instagram{   /*instagramボタン*/
+    top:15px; right: 0px;                           /*位置指定*/
+    width: 50px; height: 50px;                      /*サイズ*/
+    border-radius: 25px;                            /*角丸（ボタンを丸くする）*/
+    background-color: #333333;                    /*背景色*/
+    color: whitesmoke;                            /*文字色*/
+    transition: all 0.5s ease;                      /*アニメーション(0.5s)*/
+}
+#header-sns-button-twitter{     /*twitterボタン*/
+    top:15px; right: 70px;                          /*位置指定*/
+    width: 50px; height: 50px;                      /*サイズ*/
+    border-radius: 25px;                            /*角丸（ボタンを丸くする）*/
+    background-color: #333333;                    /*背景色*/
+    color: whitesmoke;                            /*文字色*/
+    transition: all 0.5s ease;                      /*アニメーション(0.5s)*/
+}
+#header-sns-button-instagram:active,#header-sns-button-instagram:focus,#header-sns-button-instagram:hover{ /*選択時*/
+    top:10px; right: -5px;                          /*位置指定*/
+    width: 60px; height: 60px;                      /*サイズ*/
+    border-radius: 30px;                            /*角丸（ボタンを丸くする）*/
+    background-color: whitesmoke;                 /*背景色*/
+    color:#CF2E92;                                /*文字色*/
+}
+#header-sns-button-twitter:active,#header-sns-button-twitter:focus,#header-sns-button-twitter:hover{    /*選択時*/
+    top:10px; right: 65px;                          /*位置指定*/
+    width: 60px; height: 60px;                      /*サイズ*/
+    border-radius: 30px;                            /*角丸（ボタンを丸くする）*/
+    background-color: whitesmoke;                 /*背景色*/
+    color:#1DA1F2;                                /*文字色*/
+}
+
+/*////フッター////*/
+footer{
+    width: 100%;                                    /*サイズ*/
+    padding-top: 10px; padding-bottom: 30px;        /*余白*/
+    background-color: #333333;                    /*背景色*/
+    color: white;                                 /*文字色*/
+}
+#footer-inner p{/*フッター文字*/
+    font-size: 10px;                                /*フォントサイズ*/
+    margin-bottom: 0;                               /*余白*/
+}
+#google a{/*フッターリンク*/
+    color: skyblue;                               /*色*/
+}
+
+
+
+/*/////////////////////記事ページ専用/////////////////////*/
+article{
+    margin-top: 80px;                               /*余白*/
+    min-height: calc(100vh - 100px);                /*最小高さ*/
+}
+
+/*ページ現在位置*/
+.back-link{
+    padding-top: 10px; padding-bottom: 10px;        /*余白*/
+    height: 30px;                                   /*高さ*/
+    line-height: 30px;                              /*行の高さ*/
+    overflow-x: scroll; overflow-y: hidden;         /*横スクロール許可*/
+    white-space: nowrap;                            /*改行禁止*/
+    -ms-overflow-style:none;                        /*Edgeスクロールバー消去*/
+    scrollbar-width: none;                          /*スクロールバー消去*/
+}
+.back-link::-webkit-scrollbar{
+    display: none;                                  /*WebKitスクロールバー非表示*/
+}
+.back-link a,.back-link span{
+    color: #002241;                               /*文字サイズ*/
+    font-size: 15px;                                /*フォントサイズ */
+}
+.back-link i{ /*アイコンフォント（>）*/
+    margin: 0 10px;                                 /*余白*/
+}
+
+/*本文タイトル*/
+section.article-title{  
+    width: 100%;                                    /*サイズ*/
+    background-color: #002241;                    /*背景色*/
+    color: white;                                 /*文字色*/
+    text-align: center;                             /*文字中央寄せ*/
+}
+.article-title-inner h1{/*タイトル*/
+    padding-top: 15px;                              /*余白*/
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.article-title-inner p{/*タイトル説明文本文*/
+    font-size: 13px;                                /*フォントサイズ*/
+    margin: 0;                                      /*余白*/
+    padding-bottom: 15px;                           /*余白*/
+}
+.article-title-inner p a{ /*タイトル説明文本文中リンク*/
+    color: white;                                 /*文字色*/
+}
+
+
+
+
+/*/////////////////////レスポンシブ対応/////////////////////*/
+/*タブレット*/
+@media screen and (max-width: 1250px) {
+    /*////本文標準余白////*/
+    .display-width{
+        width: 90%;                                 /*サイズ*/
+        margin: auto 5%;                            /*余白*/
+    }
+}
+
+
+/*スマートフォン・印刷*/
+@media screen and (max-width: 800px),print{
+    /*/////////////////////共通/////////////////////*/
+    /*////レスポンシブ対応////*/
+    .sp{/*スマートフォン*/
+        display: block;                              /*表示する*/
+    }
+    .pc{/*PC*/
+        display: none;                              /*表示しない*/
+    }
+
+    /*////本文標準余白////*/
+    .display-width{
+        width: 95%;                                 /*サイズ*/
+        margin: auto 2.5%;                          /*余白*/
+    }
+
+    /*////共通ヘッダー部分////*/
+    header{
+        width: 100%; height: 60px;                  /*サイズ*/
+        border: none;                               /*枠線*/
+    }
+    #header-inner{
+        height: 60px;                               /*高さ*/
+    }
+    header img{
+        top:2.5px; left:2.5px;                      /*位置*/
+        width: 55px; height: 55px;                  /*サイズ*/
+    }
+    header h1{
+        top:7.5px; left: 60px;                      /*位置*/
+        line-height:20px;                           /*行の高さ*/
+        font-size: 20px;                            /*フォントサイズ*/
+    }
+    header h1 span{
+        font-size: 15px;                            /*フォントサイズ*/
+    }
+    #header-sns-button-instagram{
+        top:5px;                                    /*位置*/
+    }
+    #header-sns-button-instagram:active,#header-sns-button-instagram:focus,#header-sns-button-instagram:hover{
+        top:1px; right: -4px;                       /*位置*/
+        width: 58px; height: 58px;                  /*サイズ*/
+        border-radius: 29px;                        /*角丸（ボタンを丸くする）*/
+    }
+
+    /*/////////////////////記事ページ専用/////////////////////*/
+    article{
+        margin-top: 60px;                           /*余白*/
+    }
+}
+
+
+/*印刷*/
+@media print{
+    /*/////////////////////共通/////////////////////*/
+    /*////本文領域////*/
+    .section-contents{
+        text-align: left;                           /*左寄せ*/
+    }
+
+    /*////メイン////*/
+    html,body{
+        background: white;                        /*背景色*/
+    }
+
+    /*////共通ヘッダー部分////*/
+    header{
+        position: static;                           /*固定ヘッダー解除*/
+    }
+}

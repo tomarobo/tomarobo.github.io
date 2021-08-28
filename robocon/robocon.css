@@ -1,0 +1,93 @@
+@charset 'UTF-8'; /*文字コード*/
+/*/////////////////////ロボコン出場ロボット紹介ページ/////////////////////*/
+.robocon-year{
+    margin: 30px 0;
+    border-radius: 10px;
+    background-color: white;
+}
+.robocon-year h2{
+    margin: 10px;
+    padding-top: 10px;
+}
+.robocon-year-details{
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.robocon-thema,.robocon-team{
+    margin: 10px;
+}
+.robocon-thema .robocon-thema-name{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    display: inline-block;
+}
+.robocon-thema-name{
+    background:linear-gradient(transparent 50%, yellow 50%);
+    margin-bottom: 10px;
+}
+.robocon-thema .robocon-thema-details{
+    width: 100%;
+    font-size: 15px;
+    display: inline-block;
+}
+.robocon-team{
+    margin: 30px 10px;
+    padding-bottom: 10px;
+}
+.robocon-team-name{
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+}
+.robocon-team-result{
+    background-color: whitesmoke;
+    padding:10px 0;
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+}
+.robocon-team-details{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.robocon-team-robot{
+    background-color: #002241;
+    margin-bottom: 10px;
+    color: white;
+}
+.robocon-team-robot img{
+    width: 100px; height: 100px;
+    object-fit: cover;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+.robocon-team-robot-text{
+    display: inline-block;
+    margin: 5px;
+    width: calc(100% - 130px);
+    vertical-align: middle;
+}
+.robocon-team-robot-text .robocon-team-robot-name{
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+}
+.robocon-team-robot-text .robocon-team-robot-details{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+}
+.note{
+    margin: 10px 0;
+    background-color: white;
+    padding: 10px;
+    font-size: 10px;
+}
