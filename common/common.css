@@ -151,6 +151,13 @@ article{
     margin-top: 80px;                               /*余白*/
     min-height: calc(100vh - 100px);                /*最小高さ*/
 }
+.article-area-img{
+    display: block;
+    margin:30px auto;                               /*余白*/
+    width: 100%;                                    /*サイズ*/
+    max-width: 1000px; max-height: 500px;
+    object-fit: contain;                            /*はみ出しの対処*/
+}
 
 /*ページ現在位置*/
 .back-link{
