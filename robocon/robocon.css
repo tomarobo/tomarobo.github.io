@@ -24,7 +24,7 @@
     display: inline-block;
 }
 .robocon-thema-name{
-    background:linear-gradient(transparent 50%, yellow 50%);
+    background:linear-gradient(transparent 50%, #FFFC67 50%);
     margin-bottom: 10px;
 }
 .robocon-thema .robocon-thema-details{

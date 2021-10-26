@@ -25,6 +25,7 @@ html,body{
     -webkit-text-size-adjust: 100%;                 /*iOS 横画面文字サイズ対策*/
     font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Yu Gothic',sans-serif; /*フォント*/
     color: #333333;                               /*文字色*/
+    scroll-behavior: smooth;                        /*スクロールを滑らかに*/
 }
 
 /*////本文標準余白////*/
@@ -267,6 +268,13 @@ section.article-title{
     }
 }
 
+/*スマートフォ(極小)*/
+@media screen and (max-width: 350px){
+    #header-sns-button{
+        display: none;
+    }
+}
+
 
 /*印刷*/
 @media print{
@@ -284,5 +292,17 @@ section.article-title{
     /*////共通ヘッダー部分////*/
     header{
         position: static;                           /*固定ヘッダー解除*/
+    }
+    #header-sns-button{
+        display: none;
+    }
+
+    article{
+        margin-top: 0;                                  /*余白*/
+    }
+
+    /*////共通フッター部分////*/
+    #google,#external{
+        display: none;
     }
 }

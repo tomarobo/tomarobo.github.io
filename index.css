@@ -97,7 +97,7 @@ section#top-bar{
     color: #333333;
 }
 #robocon-link a:hover,#robocon-link a:active,#robocon-link a:focus,#joinus-link a:hover,#joinus-link a:active,#joinus-link a:focus{
-    background-color: yellow;
+    background-color: #FFFC67;
 }
 
 
@@ -130,10 +130,11 @@ section#top-bar{
 }
 #information-list li{
     list-style: none;
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px;
     background-color: white;
+    text-align: left;
 }
 #information-list li img{
     width: 100%;
@@ -298,7 +299,7 @@ section#top-bar{
     position: absolute;
     width: 40px; height: 40px;
     left: 0; top: 0;
-    color: #002241;background-color: yellow;
+    color: #002241;background-color: #FFFC67;
     font-size: 25px; font-weight: 600;
     line-height: 40px;
 }
