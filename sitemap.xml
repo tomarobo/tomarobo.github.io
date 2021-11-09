@@ -13,6 +13,18 @@
     <changefreq>yearly</changefreq>
 </url>
 <url>
+    <loc>https://tomarobo.github.io/robocon/2021a/</loc>
+    <priority>1.0</priority>
+    <lastmod>2021-11-07T22:50:22+09:00</lastmod>
+    <changefreq>yearly</changefreq>
+</url>
+<url>
+    <loc>https://tomarobo.github.io/robocon/2021b/</loc>
+    <priority>1.0</priority>
+    <lastmod>2021-11-07T22:50:22+09:00</lastmod>
+    <changefreq>yearly</changefreq>
+</url>
+<url>
     <loc>https://tomarobo.github.io/joinus/</loc>
     <priority>1.0</priority>
     <lastmod>2021-08-28T22:50:22+09:00</lastmod>
