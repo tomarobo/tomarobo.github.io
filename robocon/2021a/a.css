@@ -148,6 +148,7 @@
 }
 .dog-img-area img{
     width: calc(50% - 5px);
+    height: auto;
 }
 #daizu-h4{
     color: #333333;

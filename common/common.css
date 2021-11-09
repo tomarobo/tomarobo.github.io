@@ -78,16 +78,17 @@ header img{/*header内の画像*/
     width: 75px; height: 75px;                      /*サイズ*/
     cursor: pointer;                                /*カーソル（ポインター）*/
 }
-header h1{/*headerの文字*/
+.header-title{/*headerの文字*/
     position: relative;                             /*配置(移動するときの基準)*/
     top:8px; left: 80px;                            /*位置指定*/
     width: 500px; height: 60px;                     /*サイズ*/
     margin: 0;                                      /*余白*/
     line-height:30px;                               /*文字を上下中央にするために行の高さを調整*/
     font-size: 25px;                                /*フォントサイズ*/
+    font-weight: 800;                               /*太字にする*/
     cursor: pointer;                                /*カーソル（ポインター）*/
 }
-header h1 span{ /*「北海道　苫小牧高専」の部分*/
+.header-title span{ /*「北海道　苫小牧高専」の部分*/
     font-size: 18px;                                /*フォントサイズ*/
 }
 
@@ -245,12 +246,12 @@ section.article-title{
         top:2.5px; left:2.5px;                      /*位置*/
         width: 55px; height: 55px;                  /*サイズ*/
     }
-    header h1{
+    .header-title{
         top:7.5px; left: 60px;                      /*位置*/
         line-height:20px;                           /*行の高さ*/
         font-size: 20px;                            /*フォントサイズ*/
     }
-    header h1 span{
+    .header-title span{
         font-size: 15px;                            /*フォントサイズ*/
     }
     #header-sns-button-instagram{

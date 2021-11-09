@@ -96,8 +96,8 @@
             <link rel="stylesheet" href="/index.css"> <!--ページ固有CSS-->
 
             <!--Script-->
-            <script src="https://kit.fontawesome.com/57d7927719.js" crossorigin="anonymous"></script><!--アイコンフォント読み込み-->
-            <script type="text/javascript" src="/index.js"></script> <!--ページ固有JS-->
+            <script async src="https://kit.fontawesome.com/57d7927719.js" crossorigin="anonymous"></script><!--アイコンフォント読み込み-->
+            <script async type="text/javascript" src="/index.js"></script> <!--ページ固有JS-->
 
             <!-- Global site tag (gtag.js) - Google Analytics（アクセス解析） -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3LDB1Y8M7"></script>
@@ -115,7 +115,7 @@
             <!--header(上部に固定表示)-->
             <div id="header-inner" class="display-width">
                 <img onclick="window.location.href='/'" alt="ロボテク" src="/img/robotech-logo.webp">
-                <h1 onclick="window.location.href='/'"><span id="school-name">北海道 苫小牧高専</span><br>ロボットテクノロジー部</h1>
+                <div class="header-title" onclick="window.location.href='/'"><span id="school-name">北海道 苫小牧高専</span><br>ロボットテクノロジー部</div>
                 <div id="header-sns-button">
                     <!--インスタグラム運用停止時以下削除-->
                     <button aria-label="Instagram" id="header-sns-button-instagram" onclick="window.open('https:\/\/www.instagram.com/TmNCT_robotech/', '_blank')"><i class="fab fa-instagram"></i></button>
@@ -232,7 +232,7 @@
                             </p>
                             <p>
                                 <div class="youtube-video" onclick="youtube('https:\/\/www.youtube.com/embed/K27lRB6oT-0?start=4','https:\/\/youtu.be/K27lRB6oT-0')">
-                                    <img src="/img/information/Youtube_001.png" alt="Youtubeサムネイル 全面に顔が付いたロボットが正面から" decoding="async">
+                                    <img src="/img/information/Youtube_001.webp" alt="Youtubeサムネイル 全面に顔が付いたロボットが正面から" decoding="async">
                                 </div>
                             </p>
                         </li>
