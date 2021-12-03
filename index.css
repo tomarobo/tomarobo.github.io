@@ -103,9 +103,7 @@ section#top-bar{
 
 /*////お知らせエリア////*/
 #notification{
-    opacity: 0;
     margin-bottom: 10px;
-    transition: all 0.5s 0s ease;
 }
 #twitter{
     display: inline-block;
@@ -255,13 +253,6 @@ section#top-bar{
 }
 
 
-/*////インスタグラム表示（snapwidget)////*/
-#instagram{
-    opacity: 0;
-    transition: all 0.5s 0s ease;
-}
-
-
 /*////活動紹介エリア)////*/
 #activity{
     background-color: #002241;
@@ -276,8 +267,6 @@ section#top-bar{
     gap: 20px 5%;
     justify-content: center;
     flex-wrap:wrap;
-    opacity: 0;
-    transition: all 0.5s 0s ease;
 }
 .activity-inner-box{
     width: 45%; height: 200px;
@@ -325,13 +314,14 @@ section#top-bar{
 }
 
 
-/*////活動場所・外部リンク////*/
-#place,#link{
+/*////スクロールアニメーション対応////*/
+.scroll{
     opacity: 0;
-    transition: all 0.5s 0s ease;
+    transition: all 0.5s ease-out;
 }
-
-
+.scroll-fade{
+    opacity: 1;
+}
 
 
 /*/////////////////////レスポンシブ対応/////////////////////*/

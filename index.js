@@ -10,8 +10,7 @@ if(window.navigator.userAgent.indexOf('Trident') != -1 || window.navigator.userA
 //ロード完了時
 window.onload = function(){
     window.setTimeout(function() {
-        make_text_change();                 //「作る」のアニメーション
-        Scroll();                           //初期の高さで表示する必要があるものがある場合のために読み込む
+        make_text_change();                 //「作る」のアニメーション                       //初期の高さで表示する必要があるものがある場合のために読み込む
     },100);                                 //100ms待機後{}内実行
 }
 
@@ -60,7 +59,6 @@ function Lazy_loading(){
 window.addEventListener('scroll', function(){ //スクロールした場合に動作
     /*スクロール*/
     Lazy_loading(); //遅延読み込み
-    Scroll();       //スクロールアニメーション
 });
 window.addEventListener('touchstart', function(){ //画面をタップした場合に動作
     /*画面タップ*/
@@ -68,48 +66,21 @@ window.addEventListener('touchstart', function(){ //画面をタップした場�
 });
 
 
-//アニメーション表示状態 false = 非表示
-var notification_state = Boolean(false);
-var instagram_state = Boolean(false);
-var activity = Boolean(false);
-var place = Boolean(false);
-var link = Boolean(false);
-
-//スクロールアニメーション
-function Scroll(){
-    //スクロール時,初期読み込み動作
-    let browser = window.innerHeight;   //ブラウザの高さ
-    var scroll = window.pageYOffset;    //スクロール量
-    var scroll_under = browser + scroll;//表示されている一番下の高さ
-
-    window.setTimeout(function() {
-        if((notification_state == false) && (scroll_under > (window.pageYOffset +document.getElementById("notification").getBoundingClientRect().top))){
-            //notificationのアニメーション
-            notification_state = true;
-            document.getElementById("notification").style.opacity=1;
+const scrollEvent = function () {
+window.addEventListener("scroll", function () {
+    let v = window.pageYOffset;
+    let s = document.querySelectorAll(".scroll");
+    let w = window.innerHeight;
+    let value = 150;
+    for (let a = 0; a < s.length; a++) {
+        let t = s[a].getBoundingClientRect().top + v;
+        if (v > t - w + value) {
+            s[a].classList.add("scroll-fade");
         }
-        if((instagram_state == false) && (scroll_under > (window.pageYOffset +document.getElementById("instagram").getBoundingClientRect().top))){
-            //instagramのアニメーション
-            instagram_state = true;
-            document.getElementById("instagram").style.opacity=1;
-        }
-        if((activity == false) && (scroll_under > (window.pageYOffset + document.getElementById("activity-inner-box-outer").getBoundingClientRect().top))){
-            //activity(フェードイン)
-            activity = true;
-            document.getElementById("activity-inner-box-outer").style.opacity = 1;
-        }
-        if((place == false) && (scroll_under > (window.pageYOffset + document.getElementById("place").getBoundingClientRect().top))){
-            //placeのアニメーション
-            place = true;
-            document.getElementById("place").style.opacity=1;
-        }
-        if((link == false) && (scroll_under > (window.pageYOffset + document.getElementById("link").getBoundingClientRect().top))){
-            //linkのアニメーション
-            link = true;
-            document.getElementById("link").style.opacity=1;
-        }
-    },250);  //250ms後に表示
-}
+    }
+});
+};
+scrollEvent();
 
 
 /*YouTubeホップアップ*/
